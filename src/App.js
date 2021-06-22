@@ -1,11 +1,9 @@
-import MyNav from './components/navbar/navbar'
-
-
+import NavHandler from "./components/navHandler";
 
 function App() {
   return (
     <div>
-      <MyNav />
+      <NavHandler />
     </div>
   );
 }
