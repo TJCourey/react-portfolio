@@ -1,12 +1,18 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import BandAidPhoto from "../../images/bandAid.gif";
+import BeerMePhoto from "../../images/beerMe.png";
+import BudgetPhoto from "../../images/budget.png";
+import FitnessPhoto from "../../images/fitness-tracker.png";
+import SchedulerPhoto from "../../images/scheduler.png";
+import WeatherPhoto from "../../images/weather-dash.png";
 
 function Portfolio() {
   const projectInfo = [
     {
       id: 1,
-      image: "",
+      image: BandAidPhoto,
       title: "BandAID",
       desc: "A helpful application for musicians on tour",
       deploy: "https://fierce-beach-33317.herokuapp.com/",
@@ -14,7 +20,7 @@ function Portfolio() {
     },
     {
       id: 2,
-      image: "",
+      image: BeerMePhoto,
       title: "BeerMe",
       desc: "A fun application for finding new beers",
       deploy: "https://tjcourey.github.io/beerMe-international/",
@@ -22,7 +28,7 @@ function Portfolio() {
     },
     {
       id: 3,
-      image: "",
+      image: SchedulerPhoto,
       title: "Day Planner",
       desc: "A helpful day planner that utilizes local storage",
       deploy: "https://tjcourey.github.io/day-planner/",
@@ -30,7 +36,7 @@ function Portfolio() {
     },
     {
       id: 4,
-      image: "",
+      image: WeatherPhoto,
       title: "Weather Overground",
       desc: "A weather application that utilizes api calls",
       deploy: "https://tjcourey.github.io/weather-dashboard/",
@@ -38,7 +44,7 @@ function Portfolio() {
     },
     {
       id: 5,
-      image: "",
+      image: FitnessPhoto,
       title: "Fitness Tracker",
       desc: "A application designed to help with fitness goals",
       deploy:
@@ -47,14 +53,14 @@ function Portfolio() {
     },
     {
       id: 6,
-      image: "",
+      image: BudgetPhoto,
       title: "Budget Tracker",
       desc: "A budgeting tool that has both online and offline functionality",
       deploy: "https://sheltered-tundra-23663.herokuapp.com/",
       github: "https://github.com/TJCourey/progressive-budget",
     },
   ];
-
+  console.log(projectInfo[1].img);
   const renderCard = (card) => {
     return (
       <Card className="projectCard" style={{ width: "18rem" }} key={card.id}>
