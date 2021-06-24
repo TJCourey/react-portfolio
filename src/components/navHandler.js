@@ -8,7 +8,6 @@ import Contact from "./contact/contact";
 function NavHandler() {
   const [currentPage, setCurrentPage] = useState("Home");
 
-  // TODO: Add a comment describing the functionality of this method
   const renderPage = () => {
     if (currentPage === "Home") {
       return <Home />;
@@ -26,9 +25,7 @@ function NavHandler() {
 
   return (
     <div>
-      {/* // TODO: Add a comment describing what we are passing as props */}
       <MyNav currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* // TODO: Add a comment explaining what is happening on the following line */}
       {renderPage()}
     </div>
   );
