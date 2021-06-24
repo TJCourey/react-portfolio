@@ -1,7 +1,8 @@
 import React from "react";
+import "./header.module.css";
 
 function Header() {
-  return <header>PICTURE BACKGROUND Name Text</header>;
+  return <header>TJ Courey Portfolio</header>;
 }
 
 export default Header;

@@ -1,0 +1,7 @@
+header {
+  background-image: url("../../images/background.jpg");
+  background-size: cover;
+  background-position: inherit;
+  color: gray;
+  height: 100px;
+}
