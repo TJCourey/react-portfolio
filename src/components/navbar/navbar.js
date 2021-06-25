@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./navbar.module.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Resume from "../../images/Resume.pdf";
