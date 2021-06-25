@@ -68,8 +68,12 @@ function Portfolio() {
         <Card.Body>
           <Card.Title>{card.title}</Card.Title>
           <Card.Text>{card.desc}</Card.Text>
-          <Button variant="primary">Github</Button>
-          <Button variant="primary">Deployed</Button>
+          <Button href={card.github} variant="primary">
+            Github
+          </Button>
+          <Button href={card.deploy} variant="primary">
+            Deployed
+          </Button>
         </Card.Body>
       </Card>
     );
