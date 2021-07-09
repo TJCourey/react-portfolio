@@ -5,9 +5,10 @@ import Header from "./components/header-footer/header";
 function App() {
   return (
     <div
+      fluid
       style={{
-        backgroundImage: "linear-gradient(to bottom right, white, dark grey)",
         backgroundSize: "cover",
+        backgroundColor: "linear-gradient(to bottom right, white, dark grey)",
       }}
     >
       <Header />

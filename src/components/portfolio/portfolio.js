@@ -9,11 +9,12 @@ import FitnessPhoto from "../../images/fitness-tracker.png";
 import SchedulerPhoto from "../../images/scheduler.png";
 import WeatherPhoto from "../../images/weather-dash.png";
 import ClayPalPhoto from "../../images/claypal.png";
+import "./portfolio.module.css";
 
 function Portfolio() {
   const projectInfo = [
     {
-      id: 0,
+      id: 1,
       image: ClayPalPhoto,
       title: "ClayPal",
       desc: "A web app designed to track clay sports score like trap and skeet",
@@ -21,7 +22,7 @@ function Portfolio() {
       github: "https://github.com/TJCourey/ClayPal",
     },
     {
-      id: 1,
+      id: 2,
       image: BandAidPhoto,
       title: "BandAID",
       desc: "A helpful application for musicians on tour",
@@ -29,7 +30,7 @@ function Portfolio() {
       github: "https://github.com/AaronDMendoza/BandAid",
     },
     {
-      id: 2,
+      id: 3,
       image: BeerMePhoto,
       title: "BeerMe",
       desc: "A fun application for finding new beers",
@@ -37,7 +38,7 @@ function Portfolio() {
       github: "https://github.com/TJCourey/beerMe-international",
     },
     {
-      id: 3,
+      id: 4,
       image: SchedulerPhoto,
       title: "Day Planner",
       desc: "A helpful day planner that utilizes local storage",
@@ -45,7 +46,7 @@ function Portfolio() {
       github: "https://github.com/TJCourey/day-planner",
     },
     {
-      id: 4,
+      id: 5,
       image: WeatherPhoto,
       title: "Weather Overground",
       desc: "A weather application that utilizes api calls",
@@ -53,7 +54,7 @@ function Portfolio() {
       github: "https://github.com/TJCourey/weather-dashboard",
     },
     {
-      id: 5,
+      id: 6,
       image: FitnessPhoto,
       title: "Fitness Tracker",
       desc: "A application designed to help with fitness goals",
@@ -62,7 +63,7 @@ function Portfolio() {
       github: "https://github.com/TJCourey/fitness-tracker",
     },
     {
-      id: 6,
+      id: 7,
       image: BudgetPhoto,
       title: "Budget Tracker",
       desc: "A budgeting tool that has both online and offline functionality",
@@ -70,50 +71,44 @@ function Portfolio() {
       github: "https://github.com/TJCourey/progressive-budget",
     },
   ];
-  // console.log(projectInfo[1].img);
   const renderCard = (card) => {
     return (
-      <Container style={{ padding: "4rem" }}>
-        <Col>
-          <Card
-            className="projectCard"
-            style={{ padding: "2rem" }}
-            key={card.id}
-          >
-            <Media>
-              <Col xs={6} md={8}>
-                <Card.Img src={card.image} fluid />
-              </Col>
-              <Card.Body>
-                <Card.Title style={{ textAlign: "Center" }}>
-                  {card.title}
-                </Card.Title>
-                <Card.Text style={{ textAlign: "center" }}>
-                  {card.desc}
-                </Card.Text>
-                <Container>
-                  <Row className="justify-content-md-center">
-                    <Col style={{ textAlign: "center" }}>
-                      <Button href={card.github} variant="dark" target="_blank">
-                        Github
-                      </Button>
-                    </Col>
-                    <br></br>
-                    <Col style={{ textAlign: "center" }}>
-                      <Button
-                        href={card.deploy}
-                        variant="secondary"
-                        target="_blank"
-                      >
-                        Deployed
-                      </Button>
-                    </Col>
-                  </Row>
-                </Container>
-              </Card.Body>
-            </Media>
-          </Card>
-        </Col>
+      <Container key={card.id} style={{ padding: "4rem" }}>
+        <Card
+          className="projectCard bg-image hover-zoom hover-shadow"
+          style={{ padding: "2rem" }}
+        >
+          <Media>
+            <Col xs={6} md={8}>
+              <Card.Img className="w-100" src={card.image} />
+            </Col>
+            <Card.Body>
+              <Card.Title style={{ textAlign: "Center" }}>
+                {card.title}
+              </Card.Title>
+              <Card.Text style={{ textAlign: "center" }}>{card.desc}</Card.Text>
+              <Container>
+                <Row className="justify-content-md-center">
+                  <Col style={{ textAlign: "center" }}>
+                    <Button href={card.github} variant="dark" target="_blank">
+                      Github
+                    </Button>
+                  </Col>
+                  <br></br>
+                  <Col style={{ textAlign: "center" }}>
+                    <Button
+                      href={card.deploy}
+                      variant="secondary"
+                      target="_blank"
+                    >
+                      Deployed
+                    </Button>
+                  </Col>
+                </Row>
+              </Container>
+            </Card.Body>
+          </Media>
+        </Card>
       </Container>
     );
   };

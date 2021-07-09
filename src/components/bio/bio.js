@@ -5,7 +5,7 @@ import Media from "react-bootstrap/Media";
 
 function Bio() {
   return (
-    <Media fluid>
+    <Media>
       <img
         width="250rem"
         className="align-self-start mr-3"
