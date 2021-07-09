@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 function Header() {
   return (
     <header>
-      <Container Fluid>
+      <Container xs={12}>
         <h2 style={{ textAlign: "end", marginRight: "2rem" }}>TJ Courey</h2>
         <h4 style={{ textAlign: "end", marginRight: "1rem" }}>
           Full-Stack Software Engineer

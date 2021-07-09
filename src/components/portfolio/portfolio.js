@@ -8,9 +8,17 @@ import BudgetPhoto from "../../images/budget.png";
 import FitnessPhoto from "../../images/fitness-tracker.png";
 import SchedulerPhoto from "../../images/scheduler.png";
 import WeatherPhoto from "../../images/weather-dash.png";
-
+import ClayPalPhoto from "../../images/ClayPalPhoto";
 function Portfolio() {
   const projectInfo = [
+    {
+      id: 0,
+      image: ClayPalPhoto,
+      title: "ClayPal",
+      desc: "A web app designed to track clay sports score like trap and skeet",
+      deploy: "https://claypal.herokuapp.com/",
+      github: "https://github.com/TJCourey/ClayPal",
+    },
     {
       id: 1,
       image: BandAidPhoto,
@@ -71,8 +79,8 @@ function Portfolio() {
             style={{ marginBottom: "3rem" }}
             key={card.id}
           >
-            <Col>
-              <Card.Img style={{ width: "40rem" }} src={card.image} fluid />
+            <Col xs={6} md={8}>
+              <Card.Img src={card.image} fluid />
             </Col>
             <Card.Body>
               <Card.Title style={{ textAlign: "Center" }}>
@@ -82,13 +90,17 @@ function Portfolio() {
               <Container>
                 <Row className="justify-content-md-center">
                   <Col style={{ textAlign: "center" }}>
-                    <Button href={card.github} variant="dark">
+                    <Button href={card.github} variant="dark" target="_blank">
                       Github
                     </Button>
                   </Col>
                   <br></br>
                   <Col style={{ textAlign: "center" }}>
-                    <Button href={card.deploy} variant="secondary">
+                    <Button
+                      href={card.deploy}
+                      variant="secondary"
+                      target="_blank"
+                    >
                       Deployed
                     </Button>
                   </Col>
