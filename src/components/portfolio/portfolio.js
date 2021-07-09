@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Media } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import BandAidPhoto from "../../images/bandAid.gif";
 import BeerMePhoto from "../../images/beerMe.png";
@@ -8,7 +8,8 @@ import BudgetPhoto from "../../images/budget.png";
 import FitnessPhoto from "../../images/fitness-tracker.png";
 import SchedulerPhoto from "../../images/scheduler.png";
 import WeatherPhoto from "../../images/weather-dash.png";
-import ClayPalPhoto from "../../images/ClayPalPhoto";
+import ClayPalPhoto from "../../images/claypal.png";
+
 function Portfolio() {
   const projectInfo = [
     {
@@ -72,41 +73,45 @@ function Portfolio() {
   // console.log(projectInfo[1].img);
   const renderCard = (card) => {
     return (
-      <Container>
+      <Container style={{ padding: "4rem" }}>
         <Col>
           <Card
             className="projectCard"
-            style={{ marginBottom: "3rem" }}
+            style={{ padding: "2rem" }}
             key={card.id}
           >
-            <Col xs={6} md={8}>
-              <Card.Img src={card.image} fluid />
-            </Col>
-            <Card.Body>
-              <Card.Title style={{ textAlign: "Center" }}>
-                {card.title}
-              </Card.Title>
-              <Card.Text style={{ textAlign: "center" }}>{card.desc}</Card.Text>
-              <Container>
-                <Row className="justify-content-md-center">
-                  <Col style={{ textAlign: "center" }}>
-                    <Button href={card.github} variant="dark" target="_blank">
-                      Github
-                    </Button>
-                  </Col>
-                  <br></br>
-                  <Col style={{ textAlign: "center" }}>
-                    <Button
-                      href={card.deploy}
-                      variant="secondary"
-                      target="_blank"
-                    >
-                      Deployed
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </Card.Body>
+            <Media>
+              <Col xs={6} md={8}>
+                <Card.Img src={card.image} fluid />
+              </Col>
+              <Card.Body>
+                <Card.Title style={{ textAlign: "Center" }}>
+                  {card.title}
+                </Card.Title>
+                <Card.Text style={{ textAlign: "center" }}>
+                  {card.desc}
+                </Card.Text>
+                <Container>
+                  <Row className="justify-content-md-center">
+                    <Col style={{ textAlign: "center" }}>
+                      <Button href={card.github} variant="dark" target="_blank">
+                        Github
+                      </Button>
+                    </Col>
+                    <br></br>
+                    <Col style={{ textAlign: "center" }}>
+                      <Button
+                        href={card.deploy}
+                        variant="secondary"
+                        target="_blank"
+                      >
+                        Deployed
+                      </Button>
+                    </Col>
+                  </Row>
+                </Container>
+              </Card.Body>
+            </Media>
           </Card>
         </Col>
       </Container>

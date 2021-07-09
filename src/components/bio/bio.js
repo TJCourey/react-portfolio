@@ -5,7 +5,7 @@ import Media from "react-bootstrap/Media";
 
 function Bio() {
   return (
-    <Media>
+    <Media fluid>
       <img
         width="250rem"
         className="align-self-start mr-3"
@@ -13,12 +13,19 @@ function Bio() {
         alt="TJ Courey"
       />
       <Media.Body>
-        <h4 style={{ textAlign: "end", paddingRight: "3rem" }}>My Story</h4>
+        <h4
+          style={{
+            textAlign: "end",
+            paddingRight: "3rem",
+          }}
+        >
+          My Story
+        </h4>
         <p
           style={{
             textAlign: "end",
             paddingRight: "1rem",
-            paddingBottom: "3rem",
+            paddingBottom: "20rem",
           }}
         >
           Full-Stack Software Engineer using a background in teaching and

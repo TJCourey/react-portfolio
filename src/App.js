@@ -4,7 +4,12 @@ import Header from "./components/header-footer/header";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: "linear-gradient(to bottom right, white, dark grey)",
+        backgroundSize: "cover",
+      }}
+    >
       <Header />
       <NavHandler />
       <Footer />

@@ -1,9 +1,8 @@
 a {
   text-decoration: none;
-  color: honeydew;
+  text-shadow: honeydew;
 }
 
 .footer {
-  height: 3rem;
   background-color: grey;
 }
