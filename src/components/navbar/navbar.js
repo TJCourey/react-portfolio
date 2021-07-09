@@ -1,31 +1,34 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import "./navbar.module.css";
 import Resume from "../../images/Resume.pdf";
+import { Container } from "react-bootstrap";
 
 const MyNav = ({ currentPage, handlePageChange }) => {
   return (
     <Navbar bg="dark" variant="dark" className="flex">
-      <Navbar.Brand href="#home" onClick={() => handlePageChange("Home")}>
-        Portfolio
-      </Navbar.Brand>
-      <Nav className="justify-content-end">
-        <Nav.Link
-          href="#projects"
-          onClick={() => handlePageChange("Portfolio")}
+      <Container fluid>
+        <Navbar.Brand
+          className="Col xs-2"
+          href="#home"
+          onClick={() => handlePageChange("Home")}
         >
-          Projects
-        </Nav.Link>
-        <Nav.Link href="#bio" onClick={() => handlePageChange("Bio")}>
-          Bio
-        </Nav.Link>
-        <Nav.Link href="#contact" onClick={() => handlePageChange("Contact")}>
-          Contact
-        </Nav.Link>
-        <Nav.Link href={Resume} target="_blank">
-          Resume
-        </Nav.Link>
-      </Nav>
+          Portfolio
+        </Navbar.Brand>
+        <Nav className="Col">
+          <Nav.Link
+            className="Col-2"
+            href="#projects"
+            onClick={() => handlePageChange("Portfolio")}
+          >
+            Projects
+          </Nav.Link>
+          <Nav.Link className="Col-2" href={Resume} target="_blank">
+            Resume
+          </Nav.Link>
+        </Nav>
+      </Container>
     </Navbar>
   );
 };

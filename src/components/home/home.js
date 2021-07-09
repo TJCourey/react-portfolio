@@ -1,9 +1,9 @@
 import React from "react";
-
+import Bio from "../bio/bio";
 function Home() {
   return (
     <div>
-      <h2>Test Home Page</h2>
+      <Bio />
     </div>
   );
 }

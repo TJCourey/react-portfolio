@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { Container, Col, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import BandAidPhoto from "../../images/bandAid.gif";
 import BeerMePhoto from "../../images/beerMe.png";
@@ -60,26 +61,47 @@ function Portfolio() {
       github: "https://github.com/TJCourey/progressive-budget",
     },
   ];
-  console.log(projectInfo[1].img);
+  // console.log(projectInfo[1].img);
   const renderCard = (card) => {
     return (
-      <Card className="projectCard" style={{ width: "18rem" }} key={card.id}>
-        <Card.Img variant="top" src={card.image} />
-        <Card.Body>
-          <Card.Title>{card.title}</Card.Title>
-          <Card.Text>{card.desc}</Card.Text>
-          <Button href={card.github} variant="primary">
-            Github
-          </Button>
-          <Button href={card.deploy} variant="primary">
-            Deployed
-          </Button>
-        </Card.Body>
-      </Card>
+      <Container>
+        <Col>
+          <Card
+            className="projectCard"
+            style={{ marginBottom: "3rem" }}
+            key={card.id}
+          >
+            <Col>
+              <Card.Img style={{ width: "40rem" }} src={card.image} fluid />
+            </Col>
+            <Card.Body>
+              <Card.Title style={{ textAlign: "Center" }}>
+                {card.title}
+              </Card.Title>
+              <Card.Text style={{ textAlign: "center" }}>{card.desc}</Card.Text>
+              <Container>
+                <Row className="justify-content-md-center">
+                  <Col style={{ textAlign: "center" }}>
+                    <Button href={card.github} variant="dark">
+                      Github
+                    </Button>
+                  </Col>
+                  <br></br>
+                  <Col style={{ textAlign: "center" }}>
+                    <Button href={card.deploy} variant="secondary">
+                      Deployed
+                    </Button>
+                  </Col>
+                </Row>
+              </Container>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Container>
     );
   };
 
-  return <div className="flex">{projectInfo.map(renderCard)}</div>;
+  return projectInfo.map(renderCard);
 }
 
 export default Portfolio;
