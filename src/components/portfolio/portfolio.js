@@ -8,7 +8,7 @@ import BudgetPhoto from "../../images/budget.png";
 import FitnessPhoto from "../../images/fitness-tracker.png";
 import SchedulerPhoto from "../../images/scheduler.png";
 import WeatherPhoto from "../../images/weather-dash.png";
-import ClayPalPhoto from "../../images/claypal.png";
+import ClayPalPhoto from "../../images/ClayPal.png";
 import "./portfolio.module.css";
 
 function Portfolio() {
