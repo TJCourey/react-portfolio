@@ -8,7 +8,7 @@ function App() {
       fluid
       style={{
         backgroundSize: "cover",
-        backgroundColor: "linear-gradient(to bottom right, white, dark grey)",
+        backgroundImage: "linear-gradient(to bottom right, white, dark grey)",
       }}
     >
       <Header />
