@@ -19,17 +19,25 @@ const Footer = () => {
           <Col></Col>
           <Col style={{ textAlign: "center" }}>
             <a href="mailto:tjcourey84@gmail.com">
-              <img style={{ maxHeight: "2rem" }} src={Email} />
+              <img
+                style={{ maxHeight: "2rem" }}
+                src={Email}
+                alt="tjcourey84@gmail.com"
+              />
             </a>
           </Col>
           <Col style={{ textAlign: "center" }}>
             <a href="https://www.linkedin.com/in/tj-courey-8817b1208/">
-              <img style={{ maxHeight: "2rem" }} src={Linkedin} />
+              <img
+                style={{ maxHeight: "2rem" }}
+                src={Linkedin}
+                alt="linkedin"
+              />
             </a>
           </Col>
           <Col style={{ textAlign: "center" }}>
             <a href="https://github.com/TJCourey">
-              <img style={{ maxHeight: "2rem" }} src={Github} />
+              <img style={{ maxHeight: "2rem" }} src={Github} alt="Github" />
             </a>
           </Col>
           <Col></Col>

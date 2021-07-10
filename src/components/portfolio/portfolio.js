@@ -74,13 +74,10 @@ function Portfolio() {
   const renderCard = (card) => {
     return (
       <Container key={card.id} style={{ padding: "4rem" }}>
-        <Card
-          className="projectCard bg-image hover-zoom hover-shadow"
-          style={{ padding: "2rem" }}
-        >
+        <Card className="projectCard" style={{ padding: "2rem" }}>
           <Media>
             <Col xs={6} md={8}>
-              <Card.Img className="w-100" src={card.image} />
+              <Card.Img src={card.image} />
             </Col>
             <Card.Body>
               <Card.Title style={{ textAlign: "Center" }}>
