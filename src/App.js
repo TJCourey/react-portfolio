@@ -4,13 +4,7 @@ import Header from "./components/header-footer/header";
 
 function App() {
   return (
-    <div
-      fluid
-      style={{
-        backgroundSize: "cover",
-        backgroundImage: "linear-gradient(to bottom right, white, dark grey)",
-      }}
-    >
+    <div fluid style={{ backgroundImage: "url(../images/greyBackground.png)" }}>
       <Header />
       <NavHandler />
       <Footer />
