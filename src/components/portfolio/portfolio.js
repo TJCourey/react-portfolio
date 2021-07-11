@@ -76,7 +76,7 @@ function Portfolio() {
       <Container key={card.id} style={{ padding: "4rem" }}>
         <Card className="projectCard" style={{ padding: "2rem" }}>
           <Media>
-            <Col xs={6} md={8}>
+            <Col>
               <Card.Img src={card.image} />
             </Col>
             <Card.Body>
